@@ -3,6 +3,7 @@ package com.atelier.productservice.services.implementation;
 import com.atelier.productservice.model.Style;
 import com.atelier.productservice.repository.StyleRepository;
 import com.atelier.productservice.services.StyleServices;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
@@ -10,6 +11,8 @@ import java.util.List;
 public class StyleServicesImpl implements StyleServices {
 
     private StyleRepository styleRepository;
+
+    @Autowired
     public StyleServicesImpl(StyleRepository styleRepository) {
         this.styleRepository = styleRepository;
     }
